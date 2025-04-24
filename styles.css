@@ -1,0 +1,138 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #212529;
+    position: relative;
+}
+.container {
+    max-width: 900px;
+    margin: 20px;
+}
+
+.highlight {
+    background-color: yellow;
+    color: black; /* Ensure text turns black */
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.btn-sm {
+    padding: 3px 6px; /* Reduce padding */
+    font-size: 12px;  /* Reduce font size */
+}
+
+th:nth-child(4), td:nth-child(4) {
+    width: 150px; /* Adjust this width as needed */
+    text-align: center;
+}
+
+/* Hover Effect */
+.btn-warning:hover {
+    background-color: #e0a800 !important; /* Slightly darker yellow */
+    color: white;
+    transform: scale(1.05); /* Slight zoom effect */
+    transition: 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: #c82333 !important; /* Darker red */
+    color: black;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+.btn-warning:active, .btn-danger:active {
+    transform: scale(0.95); /* Slight shrink when clicked */
+}
+
+/* Ensure the buttonContainer stacks buttons vertically */
+#buttonContainer {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Space between buttons */
+    align-items: center; /* Center the buttons */
+}
+
+/* Styling for Add Movie button */
+.add-movie-btn {
+    margin: 0 10px; /* Adds spacing around the Add Movie button */
+    padding: 10px 15px; /* Increase padding for a larger button */
+    font-size: 16px; /* Larger font size */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 100%; /* Full width */
+}
+
+/* Styling for Update and Cancel buttons in edit mode */
+#buttonContainer .btn-warning, 
+#buttonContainer .btn-secondary {
+    width: 100%; /* Full width to match Add Movie button */
+    padding: 10px 15px; /* Increase padding to make buttons larger */
+    font-size: 16px; /* Increase font size to match Add Movie */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: all 0.2s ease; /* Smooth transition for hover/active effects */
+}
+
+/* Ensure icons have proper spacing */
+#buttonContainer .btn i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Hover Effects */
+#buttonContainer .btn-warning:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+#buttonContainer .btn-secondary:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+}
+
+/* Active Effects */
+#buttonContainer .btn-warning:active, 
+#buttonContainer .btn-secondary:active {
+    transform: translateY(1px); /* Slight press effect */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Reduced shadow on press */
+}
+
+/* Toast Notification Styling */
+.toast {
+    min-width: 250px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Message Container Styling */
+#messageContainer {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: opacity 0.3s ease;
+}
+
+#messageContainer.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+#messageContainer.danger {
+    background-color: #f8d7da;
+}
+
+.logout-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
